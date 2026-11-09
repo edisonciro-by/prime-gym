@@ -1,0 +1,16 @@
+# Configuración de despliegue en Render (https://render.com)
+services:
+  - type: web
+    name: prime-gym
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/salud
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.1
+      - key: DB_NAME
+        value: prime_gym_db
+      - key: MONGO_URI
+        sync: false   # se escribe a mano en el panel de Render; no queda en el repositorio

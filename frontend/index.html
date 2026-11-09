@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime Gym · Gestión de gimnasio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">PRIME<span>GYM</span></div>
+    <nav id="menu">
+      <a data-view="tablero" class="active">Tablero</a>
+      <a data-view="recepcion">Recepción</a>
+      <div class="sep">Gestión</div>
+      <a data-view="socios">Socios</a>
+      <a data-view="membresias">Membresías</a>
+      <a data-view="clases">Clases</a>
+      <a data-view="entrenadores">Entrenadores</a>
+      <a data-view="planes">Planes</a>
+      <a data-view="sedes">Sedes</a>
+      <div class="sep">Análisis</div>
+      <a data-view="reportes">Reportes</a>
+    </nav>
+    <div class="estado-bd" id="estado-bd">Conectando…</div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <button class="hamburguesa" id="btn-menu" aria-label="Menú">☰</button>
+      <h1 id="titulo">Tablero</h1>
+      <div id="acciones"></div>
+    </header>
+    <section id="vista"></section>
+  </main>
+
+  <div class="modal-fondo" id="modal">
+    <div class="modal">
+      <div class="modal-cab"><h2 id="modal-titulo"></h2><button class="cerrar" data-cerrar>×</button></div>
+      <div id="modal-cuerpo"></div>
+    </div>
+  </div>
+  <div id="toasts"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

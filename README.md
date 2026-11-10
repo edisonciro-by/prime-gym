@@ -1,7 +1,9 @@
 # Prime Gym — Sistema de gestión de gimnasio
 
 Proyecto final · **Bases de Datos II** · Universidad Católica Luis Amigó
+
 Profesor: Juan Carlos Gómez
+
 Integrantes: Edison Stiven Ciro López · Juan Pablo Cardona
 
 Aplicación web para administrar una cadena de gimnasios con varias sedes: socios, planes,
